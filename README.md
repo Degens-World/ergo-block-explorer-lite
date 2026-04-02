@@ -1,5 +1,9 @@
 # Ergo Block Explorer Lite
 
+## Live Demo
+
+**[https://ad-ergo-block-explorer-lite-1775098581994.vercel.app](https://ad-ergo-block-explorer-lite-1775098581994.vercel.app)**
+
 A clean, minimal block explorer for the Ergo blockchain. Browse recent blocks, inspect transactions, and search by height or header ID — all in a single-page app with no backend required.
 
 ## Features
