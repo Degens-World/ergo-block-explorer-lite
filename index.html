@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ergo Block Explorer Lite</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="logo">&#9632;</span>
+      <h1>Ergo Block Explorer <span class="lite">Lite</span></h1>
+    </div>
+    <div class="search-bar">
+      <input id="search-input" type="text" placeholder="Search by block height or header ID..." />
+      <button id="search-btn">Search</button>
+    </div>
+    <div id="refresh-status" class="refresh-status">Auto-refresh: 60s</div>
+  </header>
+
+  <section id="network-bar" class="network-bar">
+    <div class="stat-card">
+      <span class="label">Height</span>
+      <span id="net-height" class="value">—</span>
+    </div>
+    <div class="stat-card">
+      <span class="label">Difficulty</span>
+      <span id="net-difficulty" class="value">—</span>
+    </div>
+    <div class="stat-card">
+      <span class="label">Hash Rate</span>
+      <span id="net-hashrate" class="value">—</span>
+    </div>
+    <div class="stat-card">
+      <span class="label">Supply</span>
+      <span id="net-supply" class="value">—</span>
+    </div>
+    <div class="stat-card">
+      <span class="label">Tx/Day</span>
+      <span id="net-txday" class="value">—</span>
+    </div>
+  </section>
+
+  <main>
+    <section id="blocks-section">
+      <div class="section-header">
+        <h2>Recent Blocks</h2>
+        <span id="block-count" class="badge">—</span>
+      </div>
+      <div class="table-wrap">
+        <table id="blocks-table">
+          <thead>
+            <tr>
+              <th>Height</th>
+              <th>Time</th>
+              <th>Miner</th>
+              <th>Txs</th>
+              <th>Size</th>
+              <th>Reward (ERG)</th>
+            </tr>
+          </thead>
+          <tbody id="blocks-tbody">
+            <tr><td colspan="6" class="loading-row">Loading blocks...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside id="detail-panel" class="detail-panel hidden">
+      <div class="panel-header">
+        <h2 id="panel-title">Block Details</h2>
+        <button id="close-panel">&#10005;</button>
+      </div>
+      <div id="panel-body" class="panel-body">
+        <div class="loading-row">Loading...</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <span>Data: <a href="https://api.ergoplatform.com" target="_blank" rel="noopener">Ergo Explorer API</a></span>
+    <span>Built by <a href="https://github.com/Degens-World" target="_blank" rel="noopener">Degens.World</a></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
